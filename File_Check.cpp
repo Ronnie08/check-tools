@@ -6,32 +6,25 @@ using namespace std;
 void File_Check()
 {
 
-//¼ì²é×ÀÃæ°²È«°²×°Çé¿ö
+//æ£€æŸ¥å®‰å…¨è½¯ä»¶å®‰è£…æƒ…å†µ
 	
 	FILE *fp;
-	
-	char   szBuf[255];			//»ñµÃÏµÍ³Â·¾¶
+	char   szBuf[255];			//è·å¾—ç³»ç»Ÿè·¯å¾„
 	GetSystemDirectory(szBuf,255);
 	
-
-
-	char *filename="TCCSetup.exe";   //Ä¬ÈÏÎªÏµÍ³Â·¾¶ÏÂTCCSetup.exe
+	char *filename="TCCSetup.exe";   //é»˜è®¤ä¸ºç³»ç»Ÿè·¯å¾„ä¸‹TCCSetup.exe
 	char a[2]="\\";
 	strcat(szBuf,a);
 	strcat(szBuf,filename);
 
-	
 //  "c:\\windows\\system32\\TCCSetup.exe";
-
 	fp=fopen(szBuf,"r");
-	printf("\tÊÇ·ñ°²×°×ÀÃæ°²È«Èí¼ş£º");
+	printf("\tæ˜¯å¦å®‰è£…å®‰å…¨è½¯ä»¶ï¼š");
 	if(fp==NULL)
 	{
-		printf("Î´°²×°\n\n");
+		printf("æœªå®‰è£…\n\n");
 	
 	}
-	else {printf("ÒÑ°²×°\n\n");}
-
-
+	else {printf("å·²å®‰è£…\n\n");}
 
 }
